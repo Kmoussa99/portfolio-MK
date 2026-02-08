@@ -9,6 +9,7 @@ permissions:
   contents: read
   pages: write
   id-token: write
+  actions: read
 
 concurrency:
   group: "pages"
@@ -16,6 +17,9 @@ concurrency:
 
 jobs:
   deploy:
+    # Empêche l'exécution sur des PR/forks où le GITHUB_TOKEN n'a pas accès à Pages
+    if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' }}
+
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -28,10 +32,17 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      # Publie uniquement le contenu du site (évite .git, .github, .idea, etc.)
+      - name: Prepare site
+        run: |
+          mkdir -p _site
+          shopt -s extglob
+          cp -R !(._site|.git|.github|.idea) _site/ || true
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
 
       - name: Deploy
         id: deployment
