@@ -1,0 +1,7 @@
+com/orange/audit/annotation/AuditLogOrange.class
+com/orange/audit/aspect/AuditLogAspect.class
+com/orange/audit/model/AuditLogEntry.class
+com/orange/audit/service/AuditLogService$1.class
+com/orange/audit/service/AuditLogService.class
+com/orange/audit/config/AuditAutoConfiguration.class
+com/orange/audit/model/AuditLogEntry$AuditLogEntryBuilder.class

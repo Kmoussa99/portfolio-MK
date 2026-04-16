@@ -3,31 +3,39 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Moussa Koné — Manager IT / Développeur Sénior</title>
-  <meta name="description" content="Portfolio et page de présentation de Moussa Koné — Manager IT / Développeur Sénior (Java, Spring Boot, Angular, Cloud, DevOps)." />
-  <meta name="color-scheme" content="light dark" />
+  <title>Moussa Koné — Développeur Sénior / Chef de Projet IT</title>
+  <meta name="description" content="Portfolio et page de présentation de Moussa Koné — Développeur Sénior / Chef de Projet IT (Java, Spring Boot, Angular, Cloud, DevOps)." />
+  <meta name="color-scheme" content="dark" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 </head>
 <body>
   <a class="skip" href="#contenu">Aller au contenu</a>
 
+  <!-- Animated background orbs -->
+  <div class="bg-orbs" aria-hidden="true">
+    <div class="orb orb--1"></div>
+    <div class="orb orb--2"></div>
+    <div class="orb orb--3"></div>
+  </div>
+
   <header class="topbar">
     <div class="container topbar__inner">
       <div class="brand">
         <span class="brand__dot" aria-hidden="true"></span>
-        <span class="brand__name">Moussa Koné</span>
+        <span class="brand__name">MK</span>
       </div>
       <nav class="nav" aria-label="Navigation principale">
-        <a href="#apropos">À propos</a>
-        <a href="#competences">Compétences</a>
-        <a href="#experience">Expériences</a>
-        <a href="#formation">Formations</a>
-        <a href="#contact">Contact</a>
+        <a href="#apropos" class="nav__link">À propos</a>
+        <a href="#competences" class="nav__link">Compétences</a>
+        <a href="#experience" class="nav__link">Expériences</a>
+        <a href="#formation" class="nav__link">Formations</a>
+        <a href="#contact" class="nav__link">Contact</a>
       </nav>
+      <a class="btn btn--nav" href="#contact">Me contacter</a>
       <button class="navbtn" id="navbtn" aria-label="Ouvrir le menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -44,308 +52,420 @@
   </header>
 
   <main id="contenu">
+
+    <!-- ==================== HERO ==================== -->
     <section class="hero">
-      <div class="container hero__grid">
-        <div class="hero__text">
-          <p class="kicker">Manager IT / Développeur Sénior</p>
-          <h1>Je conçois des produits fiables, sécurisés et orientés usage.</h1>
-          <p class="lead">
-            Franco‑Ivoirien, en mobilité internationale. Expérience en banque et fintech
-            (core banking, monitoring), avec une culture Agile/Scrum.
-          </p>
-
-          <div class="cta">
-            <a class="btn primary" href="#contact">Me contacter</a>
-            <a class="btn" href="assets/Cv-moussa_KONE.pdf" download>Télécharger mon CV</a>
+      <div class="container hero__container">
+        <div class="hero__content" data-animate>
+          <div class="hero__badge">
+            <span class="badge__dot"></span>
+            <span>Disponible pour de nouvelles opportunités</span>
           </div>
-
-          <ul class="quick">
-            <li><span class="label">Localisation</span><span>Abidjan, Côte d’Ivoire</span></li>
-            <li><span class="label">Langues</span><span>Français (C2) · Anglais (B1)</span></li>
-            <li><span class="label">Stack</span><span>Java · Spring Boot · Angular · Kubernetes</span></li>
-          </ul>
+          <h1 class="hero__title">
+            Je conçois des produits<br/>
+            <span class="gradient-text">fiables, sécurisés</span><br/>
+            et orientés usage.
+          </h1>
+          <p class="hero__lead">
+            Développeur Sénior & Chef de Projet IT — Franco‑Ivoirien en mobilité internationale.<br/>
+            Expérience en banque et fintech (core banking, monitoring), culture Agile/Scrum.
+          </p>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#contact">
+              <span>Me contacter</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="btn btn--outline" href="assets/Cv-moussa_KONE.pdf" download>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2v8m0 0l-3-3m3 3l3-3M3 12v1h10v-1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Télécharger mon CV</span>
+            </a>
+          </div>
         </div>
 
-        <aside class="card hero__card" aria-label="Carte profil">
-          <div class="avatar" aria-hidden="true">
-            <img class="avatar__photo" src="assets/photo.png" alt="Photo de Moussa Koné" loading="lazy" decoding="async" />
-          </div>
-          <div class="card__body">
-            <h2 class="card__title">Moussa Koné</h2>
-            <p class="card__subtitle">Manager IT / Développeur Sénior</p>
-
-            <div class="chips" aria-label="Mots-clés">
-              <span class="chip">Agile / Scrum</span>
-              <span class="chip">Fullstack</span>
-              <span class="chip">Cloud & DevOps</span>
-              <span class="chip">Monitoring</span>
+        <aside class="hero__card" data-animate>
+          <div class="profile-card">
+            <div class="profile-card__header">
+              <div class="profile-card__avatar">
+                <img src="assets/photo.png" alt="Photo de Moussa Koné" loading="lazy" decoding="async" />
+              </div>
+              <div class="profile-card__glow" aria-hidden="true"></div>
             </div>
-
-            <div class="links">
-              <a class="link" href="https://linkedin.com/in/moussa-kone-44b6761a3" target="_blank" rel="noreferrer">LinkedIn</a>
-              <a class="link" href="https://github.com/Kmoussa99" target="_blank" rel="noreferrer">GitHub</a>
-              <a class="link" href="https://gitlab.com/K-moussa" target="_blank" rel="noreferrer">GitLab</a>
+            <div class="profile-card__body">
+              <h2 class="profile-card__name">Moussa Koné</h2>
+              <p class="profile-card__role">Développeur Sénior / Chef de Projet IT</p>
+              <div class="profile-card__chips">
+                <span class="chip">Agile / Scrum</span>
+                <span class="chip">Fullstack</span>
+                <span class="chip">Cloud & DevOps</span>
+                <span class="chip">Monitoring</span>
+              </div>
+              <div class="profile-card__links">
+                <a class="social-link" href="https://linkedin.com/in/moussa-kone-44b6761a3" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+                <a class="social-link" href="https://github.com/Kmoussa99" target="_blank" rel="noreferrer" aria-label="GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                </a>
+                <a class="social-link" href="https://gitlab.com/K-moussa" target="_blank" rel="noreferrer" aria-label="GitLab">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.955 13.587l-1.342-4.135-2.664-8.189a.455.455 0 00-.867 0L16.418 9.45H7.582L4.918 1.263a.455.455 0 00-.867 0L1.386 9.452.044 13.587a.924.924 0 00.331 1.023L12 23.054l11.625-8.443a.92.92 0 00.33-1.024"/></svg>
+                </a>
+              </div>
             </div>
           </div>
         </aside>
       </div>
 
-      <div class="container stats" aria-label="Points forts">
-        <div class="stat">
-          <div class="stat__value">5+</div>
-          <div class="stat__label">années en Java/Angular</div>
-        </div>
-        <div class="stat">
-          <div class="stat__value">Agile</div>
-          <div class="stat__label">Scrum Master & facilitation</div>
-        </div>
-        <div class="stat">
-          <div class="stat__value">Cloud</div>
-          <div class="stat__label">Kubernetes · Docker · Vault</div>
+      <!-- Stats bar -->
+      <div class="container">
+        <div class="stats" data-animate>
+          <div class="stat">
+            <div class="stat__icon">⚡</div>
+            <div class="stat__content">
+              <div class="stat__value" data-count="5">5+</div>
+              <div class="stat__label">années en Java/Angular</div>
+            </div>
+          </div>
+          <div class="stat">
+            <div class="stat__icon">🔄</div>
+            <div class="stat__content">
+              <div class="stat__value">Agile</div>
+              <div class="stat__label">Scrum Master & facilitation</div>
+            </div>
+          </div>
+          <div class="stat">
+            <div class="stat__icon">☁️</div>
+            <div class="stat__content">
+              <div class="stat__value">Cloud</div>
+              <div class="stat__label">Kubernetes · Docker · Vault</div>
+            </div>
+          </div>
+          <div class="stat">
+            <div class="stat__icon">🌍</div>
+            <div class="stat__content">
+              <div class="stat__value">International</div>
+              <div class="stat__label">France · Côte d'Ivoire</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- ==================== À PROPOS ==================== -->
     <section class="section" id="apropos">
       <div class="container">
-        <div class="section__head">
-          <h2>À propos</h2>
-          <p>Profil hybride : pilotage, delivery, et développement fullstack.</p>
+        <div class="section__head" data-animate>
+          <span class="section__tag">À propos</span>
+          <h2 class="section__title">Profil hybride : pilotage,<br/><span class="gradient-text">delivery & développement fullstack.</span></h2>
         </div>
-        <div class="grid2">
-          <div class="card">
-            <div class="card__body">
-              <h3>Ce que j’apporte</h3>
-              <ul class="bullets">
-                <li>Pilotage de domaines et conception de solutions orientées expérience client.</li>
-                <li>Développement d’applications internes et de fonctionnalités à forte valeur.</li>
-                <li>Amélioration continue : processes, qualité, et levée d’obstacles (Scrum Master).</li>
-              </ul>
-            </div>
+        <div class="about-grid" data-animate>
+          <div class="about-card about-card--main">
+            <div class="about-card__icon">🎯</div>
+            <h3>Ce que j'apporte</h3>
+            <ul class="about-list">
+              <li>Pilotage de domaines et conception de solutions orientées expérience client.</li>
+              <li>Développement d'applications internes et de fonctionnalités à forte valeur.</li>
+              <li>Amélioration continue : processes, qualité, et levée d'obstacles (Scrum Master).</li>
+            </ul>
           </div>
-          <div class="card">
-            <div class="card__body">
-              <h3>Domaines</h3>
-              <ul class="bullets">
-                <li>Core banking / engagement et parcours omnicanal</li>
-                <li>Applications de monitoring et support</li>
-                <li>Outillage DevOps et observabilité</li>
-              </ul>
+          <div class="about-card">
+            <div class="about-card__icon">🏦</div>
+            <h3>Domaines</h3>
+            <ul class="about-list">
+              <li>Core banking / engagement et parcours omnicanal</li>
+              <li>Applications de monitoring et support</li>
+              <li>Outillage DevOps et observabilité</li>
+            </ul>
+          </div>
+          <div class="about-card about-card--info">
+            <div class="about-card__row">
+              <span class="about-card__label">📍 Localisation</span>
+              <span>Abidjan, Côte d'Ivoire</span>
+            </div>
+            <div class="about-card__row">
+              <span class="about-card__label">🗣 Langues</span>
+              <span>Français (C2) · Anglais (B1)</span>
+            </div>
+            <div class="about-card__row">
+              <span class="about-card__label">⚙️ Stack</span>
+              <span>Java · Spring Boot · Angular · Kubernetes</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ==================== COMPÉTENCES ==================== -->
     <section class="section" id="competences">
       <div class="container">
-        <div class="section__head">
-          <h2>Compétences</h2>
-          <p>Technos et méthodes utilisées en production.</p>
+        <div class="section__head" data-animate>
+          <span class="section__tag">Compétences</span>
+          <h2 class="section__title">Technos et méthodes<br/><span class="gradient-text">utilisées en production.</span></h2>
         </div>
 
-        <div class="skillgrid">
-          <div class="card">
-            <div class="card__body">
-              <h3>Back</h3>
-              <p class="muted">Java, Spring Boot, Spring Batch, Spring Security, C#, .NET</p>
+        <div class="bento" data-animate>
+          <div class="bento__item bento--wide">
+            <div class="bento__icon">☕</div>
+            <h3>Back-end</h3>
+            <p>Java, Spring Boot, Spring Batch, Spring Security, Spring Cloud, Hibernate, JPA, C#, .NET, API REST, Microservices</p>
+            <div class="bento__tags">
+              <span>Java</span><span>Spring Boot</span><span>Spring Batch</span><span>Spring Security</span><span>Spring Cloud</span><span>Hibernate</span><span>JPA</span><span>C#</span><span>.NET</span><span>REST API</span><span>Microservices</span>
             </div>
           </div>
-          <div class="card">
-            <div class="card__body">
-              <h3>Front</h3>
-              <p class="muted">Angular, PrimeNG</p>
+          <div class="bento__item">
+            <div class="bento__icon">🎨</div>
+            <h3>Front-end</h3>
+            <p>Angular, TypeScript, PrimeNG, HTML, CSS, JavaScript</p>
+            <div class="bento__tags">
+              <span>Angular</span><span>TypeScript</span><span>PrimeNG</span><span>HTML/CSS</span><span>JavaScript</span>
             </div>
           </div>
-          <div class="card">
-            <div class="card__body">
-              <h3>Mobile</h3>
-              <p class="muted">Flutter, KapptiBuilder, UI designer, Mini Apps WeChat</p>
+          <div class="bento__item">
+            <div class="bento__icon">📱</div>
+            <h3>Mobile</h3>
+            <p>Flutter, Dart, KapptiBuilder, UI designer, Mini Apps WeChat</p>
+            <div class="bento__tags">
+              <span>Flutter</span><span>Dart</span><span>WeChat</span>
             </div>
           </div>
-          <div class="card">
-            <div class="card__body">
-              <h3>Données & Observabilité</h3>
-              <p class="muted">PostgreSQL, Oracle Database, Elasticsearch, Kibana, Logstash</p>
+          <div class="bento__item bento--wide">
+            <div class="bento__icon">📊</div>
+            <h3>Données & Observabilité</h3>
+            <p>PostgreSQL, Oracle Database, MySQL, MongoDB, Elasticsearch, Kibana, Logstash, Grafana</p>
+            <div class="bento__tags">
+              <span>PostgreSQL</span><span>Oracle</span><span>MySQL</span><span>MongoDB</span><span>ELK Stack</span><span>Grafana</span>
             </div>
           </div>
-          <div class="card">
-            <div class="card__body">
-              <h3>Cloud & DevOps</h3>
-              <p class="muted">IBM Cloud, Kubernetes, Docker, Vault</p>
+          <div class="bento__item">
+            <div class="bento__icon">☁️</div>
+            <h3>Cloud & DevOps</h3>
+            <p>IBM Cloud, Kubernetes, Docker, Vault, Jenkins, GitLab CI/CD, SonarQube, Maven, Git</p>
+            <div class="bento__tags">
+              <span>K8s</span><span>Docker</span><span>Vault</span><span>Jenkins</span><span>GitLab CI/CD</span><span>SonarQube</span><span>Maven</span><span>Git</span>
             </div>
           </div>
-          <div class="card">
-            <div class="card__body">
-              <h3>Organisation</h3>
-              <p class="muted">Agile, Scrum · CI/CD (GitLab CI/CD)</p>
+          <div class="bento__item">
+            <div class="bento__icon">🔄</div>
+            <h3>Organisation & Gestion de Projet</h3>
+            <p>Agile, Scrum, Kanban, Jira, Confluence, UML, Merise</p>
+            <div class="bento__tags">
+              <span>Scrum</span><span>Kanban</span><span>Jira</span><span>Confluence</span><span>UML</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ==================== EXPÉRIENCES ==================== -->
     <section class="section" id="experience">
       <div class="container">
-        <div class="section__head">
-          <h2>Expériences</h2>
-          <p>Sélection des missions clés (résumé).</p>
+        <div class="section__head" data-animate>
+          <span class="section__tag">Expériences</span>
+          <h2 class="section__title">Sélection des<br/><span class="gradient-text">missions clés.</span></h2>
         </div>
 
-        <ol class="timeline">
-          <li class="timeline__item">
-            <div class="timeline__meta">
-              <span class="timeline__role">Manager IT</span>
+        <div class="timeline" data-animate>
+          <div class="timeline__line" aria-hidden="true"></div>
+
+          <div class="timeline__item">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__card">
+              <div class="timeline__header">
+                <span class="timeline__role">Manager IT</span>
+                <span class="timeline__date">mai 2025 — aujourd'hui</span>
+              </div>
               <span class="timeline__org">Orange Money Group · Abidjan</span>
-              <span class="timeline__date">mai 2025 — aujourd’hui</span>
-            </div>
-            <div class="timeline__content">
-              <p>
+              <p class="timeline__desc">
                 Pilotage de la conception, implémentation et gestion du domaine <strong>Engagement</strong>
-                d’un projet de core banking Orange Money, pour une expérience client cohérente, fluide et omnicanale.
+                d'un projet de core banking Orange Money, pour une expérience client cohérente, fluide et omnicanale.
               </p>
             </div>
-          </li>
+          </div>
 
-          <li class="timeline__item">
-            <div class="timeline__meta">
-              <span class="timeline__role">Développeur Digital</span>
+          <div class="timeline__item">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__card">
+              <div class="timeline__header">
+                <span class="timeline__role">Développeur Digital</span>
+                <span class="timeline__date">mai 2025 — aujourd'hui</span>
+              </div>
               <span class="timeline__org">Orange Money Group · Abidjan</span>
-              <span class="timeline__date">mai 2025 — aujourd’hui</span>
+              <p class="timeline__desc">Développement de nouvelles applications internes (ex. OBA).</p>
             </div>
-            <div class="timeline__content">
-              <p>Développement de nouvelles applications internes (ex. OBA).</p>
-            </div>
-          </li>
+          </div>
 
-          <li class="timeline__item">
-            <div class="timeline__meta">
-              <span class="timeline__role">Scrum Master</span>
+          <div class="timeline__item">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__card">
+              <div class="timeline__header">
+                <span class="timeline__role">Scrum Master</span>
+                <span class="timeline__date">jan. 2024 — mai 2025</span>
+              </div>
               <span class="timeline__org">BNP Paribas · Paris</span>
-              <span class="timeline__date">jan. 2024 — mai 2025</span>
+              <p class="timeline__desc">Optimisation des processus, résolution des obstacles, amélioration productivité & qualité sur une application de monitoring.</p>
             </div>
-            <div class="timeline__content">
-              <p>Optimisation des processus, résolution des obstacles, amélioration productivité & qualité sur une application de monitoring.</p>
-            </div>
-          </li>
+          </div>
 
-          <li class="timeline__item">
-            <div class="timeline__meta">
-              <span class="timeline__role">Chef de Projet IT</span>
+          <div class="timeline__item">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__card">
+              <div class="timeline__header">
+                <span class="timeline__role">Chef de Projet IT</span>
+                <span class="timeline__date">jan. 2024 — mai 2025</span>
+              </div>
               <span class="timeline__org">BNP Paribas · Paris</span>
-              <span class="timeline__date">jan. 2024 — mai 2025</span>
+              <p class="timeline__desc">Transfert de support d'une application de monitoring et d'applications comptables.</p>
             </div>
-            <div class="timeline__content">
-              <p>Transfert de support d’une application de monitoring et d’applications comptables.</p>
-            </div>
-          </li>
+          </div>
 
-          <li class="timeline__item">
-            <div class="timeline__meta">
-              <span class="timeline__role">Développeur Fullstack Java/Angular</span>
+          <div class="timeline__item">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__card">
+              <div class="timeline__header">
+                <span class="timeline__role">Développeur Fullstack Java/Angular</span>
+                <span class="timeline__date">sept. 2021 — mai 2025</span>
+              </div>
               <span class="timeline__org">BNP Paribas · Paris</span>
-              <span class="timeline__date">sept. 2021 — mai 2025</span>
+              <p class="timeline__desc">Développement de nouvelles fonctionnalités sur une application de monitoring.</p>
             </div>
-            <div class="timeline__content">
-              <p>Développement de nouvelles fonctionnalités sur une application de monitoring.</p>
-            </div>
-          </li>
+          </div>
 
-          <li class="timeline__item">
-            <div class="timeline__meta">
-              <span class="timeline__role">Développeur Fullstack Java/Angular</span>
-              <span class="timeline__org">Université d’Orléans · Orléans</span>
-              <span class="timeline__date">mai 2021 — sept. 2021</span>
+          <div class="timeline__item">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__card">
+              <div class="timeline__header">
+                <span class="timeline__role">Développeur Fullstack Java/Angular</span>
+                <span class="timeline__date">mai 2021 — sept. 2021</span>
+              </div>
+              <span class="timeline__org">Université d'Orléans · Orléans</span>
+              <p class="timeline__desc">Développement de fonctionnalités pour une application de gestion et suivi des aides universitaires.</p>
             </div>
-            <div class="timeline__content">
-              <p>Développement de fonctionnalités pour une application de gestion et suivi des aides universitaires.</p>
-            </div>
-          </li>
-        </ol>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- ==================== FORMATIONS ==================== -->
     <section class="section" id="formation">
       <div class="container">
-        <div class="section__head">
-          <h2>Formations & certificats</h2>
-          <p>Parcours académique et certifications (résumé).</p>
+        <div class="section__head" data-animate>
+          <span class="section__tag">Formations & Certificats</span>
+          <h2 class="section__title">Parcours académique et<br/><span class="gradient-text">certifications.</span></h2>
         </div>
 
-        <div class="grid2">
-          <div class="card">
-            <div class="card__body">
-              <h3>Formations</h3>
-              <ul class="bullets">
-                <li><strong>Master Informatique</strong> — Université d’Orléans (2021–2023)</li>
-                <li><strong>Licence Informatique</strong> — Université d’Orléans (2020–2021)</li>
-              </ul>
+        <div class="edu-grid" data-animate>
+          <div class="edu-card">
+            <div class="edu-card__icon">🎓</div>
+            <h3>Formations</h3>
+            <div class="edu-card__items">
+              <div class="edu-item">
+                <strong>Doctorat Informatique — Architecture et Systèmes d'Informations</strong>
+                <span>INP-HB Yamoussoukro · 2026–2029 · <em>En cours</em></span>
+              </div>
+              <div class="edu-item">
+                <strong>Master Informatique</strong>
+                <span>Université d'Orléans · 2021–2023</span>
+              </div>
+              <div class="edu-item">
+                <strong>Licence Informatique</strong>
+                <span>Université d'Orléans · 2020–2021</span>
+              </div>
             </div>
           </div>
-          <div class="card">
-            <div class="card__body">
-              <h3>Certificats</h3>
-              <ul class="bullets">
-                <li>Focus Scrum Master</li>
-                <li>Facilitation de l’intelligence Collective</li>
-                <li>Kanban : Apprendre à délivrer au rythme client</li>
-              </ul>
+          <div class="edu-card">
+            <div class="edu-card__icon">📜</div>
+            <h3>Certificats</h3>
+            <div class="edu-card__items">
+              <div class="edu-item">
+                <strong>Focus Scrum Master</strong>
+              </div>
+              <div class="edu-item">
+                <strong>Facilitation de l'intelligence Collective</strong>
+              </div>
+              <div class="edu-item">
+                <strong>Kanban : Apprendre à délivrer au rythme client</strong>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div class="card mt">
-          <div class="card__body">
+          <div class="edu-card edu-card--full">
+            <div class="edu-card__icon">💻</div>
             <h3>Projets</h3>
-            <p class="muted">
-              Retrouvez des projets et expérimentations sur GitLab et GitHub.
-            </p>
-            <div class="links">
-              <a class="link" href="https://gitlab.com/K-moussa" target="_blank" rel="noreferrer">gitlab.com/K-moussa</a>
-              <a class="link" href="https://github.com/Kmoussa99" target="_blank" rel="noreferrer">github.com/Kmoussa99</a>
+            <p>Retrouvez des projets et expérimentations sur GitLab et GitHub.</p>
+            <div class="edu-card__links">
+              <a class="btn btn--outline btn--sm" href="https://gitlab.com/K-moussa" target="_blank" rel="noreferrer">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.955 13.587l-1.342-4.135-2.664-8.189a.455.455 0 00-.867 0L16.418 9.45H7.582L4.918 1.263a.455.455 0 00-.867 0L1.386 9.452.044 13.587a.924.924 0 00.331 1.023L12 23.054l11.625-8.443a.92.92 0 00.33-1.024"/></svg>
+                GitLab
+              </a>
+              <a class="btn btn--outline btn--sm" href="https://github.com/Kmoussa99" target="_blank" rel="noreferrer">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                GitHub
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="contact">
+    <!-- ==================== CONTACT ==================== -->
+    <section class="section section--contact" id="contact">
       <div class="container">
-        <div class="section__head">
-          <h2>Contact</h2>
-          <p>Disponible pour missions, collaborations et opportunités.</p>
+        <div class="section__head" data-animate>
+          <span class="section__tag">Contact</span>
+          <h2 class="section__title">Disponible pour missions,<br/><span class="gradient-text">collaborations et opportunités.</span></h2>
         </div>
 
-        <div class="grid2">
-          <div class="card">
-            <div class="card__body">
-              <h3>Coordonnées</h3>
-              <ul class="contact">
-                <li><span class="label">Email</span><a href="mailto:konemoussamohamed@gmail.com">konemoussamohamed@gmail.com</a></li>
-                <li><span class="label">Téléphone</span><a href="tel:+2250798408349">+225 07 98 40 83 49</a></li>
-                <li><span class="label">Ville</span><span>Abidjan, Côte d’Ivoire</span></li>
-              </ul>
+        <div class="contact-grid" data-animate>
+          <div class="contact-card contact-card--main">
+            <h3>Travaillons ensemble</h3>
+            <p>N'hésitez pas à me contacter pour discuter de vos projets, missions ou opportunités de collaboration.</p>
+            <div class="contact-info">
+              <a href="mailto:konemoussamohamed@gmail.com" class="contact-row">
+                <span class="contact-row__icon">✉️</span>
+                <span class="contact-row__text">
+                  <span class="contact-row__label">Email</span>
+                  <span>konemoussamohamed@gmail.com</span>
+                </span>
+              </a>
+              <a href="tel:+2250798408349" class="contact-row">
+                <span class="contact-row__icon">📞</span>
+                <span class="contact-row__text">
+                  <span class="contact-row__label">Téléphone</span>
+                  <span>+225 07 98 40 83 49</span>
+                </span>
+              </a>
+              <div class="contact-row">
+                <span class="contact-row__icon">📍</span>
+                <span class="contact-row__text">
+                  <span class="contact-row__label">Ville</span>
+                  <span>Abidjan, Côte d'Ivoire</span>
+                </span>
+              </div>
             </div>
           </div>
-
-          <div class="card">
-            <div class="card__body">
-              <h3>Réseaux</h3>
-              <ul class="contact">
-                <li><span class="label">LinkedIn</span><a target="_blank" rel="noreferrer" href="https://linkedin.com/in/moussa-kone-44b6761a3">moussa-kone-44b6761a3</a></li>
-                <li><span class="label">GitHub</span><a target="_blank" rel="noreferrer" href="https://github.com/Kmoussa99">Kmoussa99</a></li>
-                <li><span class="label">GitLab</span><a target="_blank" rel="noreferrer" href="https://gitlab.com/K-moussa">K-moussa</a></li>
-              </ul>
-              
+          <div class="contact-card">
+            <h3>Réseaux</h3>
+            <div class="contact-socials">
+              <a class="contact-social" href="https://linkedin.com/in/moussa-kone-44b6761a3" target="_blank" rel="noreferrer">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                <span>LinkedIn</span>
+              </a>
+              <a class="contact-social" href="https://github.com/Kmoussa99" target="_blank" rel="noreferrer">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                <span>GitHub</span>
+              </a>
+              <a class="contact-social" href="https://gitlab.com/K-moussa" target="_blank" rel="noreferrer">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M23.955 13.587l-1.342-4.135-2.664-8.189a.455.455 0 00-.867 0L16.418 9.45H7.582L4.918 1.263a.455.455 0 00-.867 0L1.386 9.452.044 13.587a.924.924 0 00.331 1.023L12 23.054l11.625-8.443a.92.92 0 00.33-1.024"/></svg>
+                <span>GitLab</span>
+              </a>
             </div>
           </div>
         </div>
 
         <footer class="footer">
-          <p>© <span id="year"></span> Moussa Koné </p>
+          <p>© <span id="year"></span> Moussa Koné — Conçu avec passion.</p>
         </footer>
       </div>
     </section>
+
   </main>
 
   <script src="script.js"></script>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Configuration Logback pour les Audit Logs Orange.
+  Inclure ce fichier dans le logback-spring.xml de chaque microservice :
+      <include resource="logback-audit.xml"/>
+
+  L'envoi vers Elasticsearch est fait directement par AuditLogService (HTTPS).
+  Cet appender sert uniquement de fichier local de secours.
+  PAS BESOIN DE LOGSTASH.
+-->
+<included>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- Appender AUDIT_FILE — Fichier local JSON de secours        -->
+    <!-- Si Elasticsearch est indisponible, les logs restent ici.   -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <appender name="AUDIT_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/audit-logs.json</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>logs/audit-logs.%d{yyyy-MM-dd}.%i.json</fileNamePattern>
+            <maxFileSize>50MB</maxFileSize>
+            <maxHistory>30</maxHistory>
+            <totalSizeCap>1GB</totalSizeCap>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- Logger AUDIT — logger dédié, séparé des logs applicatifs   -->
+    <!-- L'envoi vers ES est fait par AuditLogService directement.  -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <logger name="AUDIT" level="INFO" additivity="false">
+        <appender-ref ref="AUDIT_FILE"/>
+    </logger>
+
+</included>
+

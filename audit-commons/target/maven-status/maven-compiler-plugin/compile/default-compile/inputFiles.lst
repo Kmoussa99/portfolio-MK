@@ -1,0 +1,5 @@
+/Users/moussakone/IdeaProjects/API Gateway/audit-commons/src/main/java/com/orange/audit/annotation/AuditLogOrange.java
+/Users/moussakone/IdeaProjects/API Gateway/audit-commons/src/main/java/com/orange/audit/aspect/AuditLogAspect.java
+/Users/moussakone/IdeaProjects/API Gateway/audit-commons/src/main/java/com/orange/audit/config/AuditAutoConfiguration.java
+/Users/moussakone/IdeaProjects/API Gateway/audit-commons/src/main/java/com/orange/audit/model/AuditLogEntry.java
+/Users/moussakone/IdeaProjects/API Gateway/audit-commons/src/main/java/com/orange/audit/service/AuditLogService.java
